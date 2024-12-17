@@ -1,36 +1,42 @@
 <!--Nojus Siksnys EKf-23 LD7-->
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="author" content="Jūsų Vardas">
+    <meta name="author" content="Nojus Šikšnys">
     <meta name="description" content="Laboratorinio darbo užduotis">
-    <meta name="keywords" content="HTML, meta, koduotė, laboratorinis darbas">
+    <meta name="keywords" content="HTML, CSS, JavaScript, meta, koduotė, laboratorinis darbas">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
     <link rel="stylesheet" href="styles.css" type="text/css">
 
+    <script id="MathJax-script" async
+            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    
+
     <title>Skiltis su <div></title>
-    <style>
-        .section {
-            height: 500px;
-            padding: 20px;
-            margin: 10px 0;
-            border: 1px solid #ddd;
-            background-image: url('Assets/background.jpg'); /* Pridedame paveikslėlį kaip foną */
-            background-size: cover; /* Paveikslėlis pritaikomas visam skilties plotui */
-            background-position: center; /* Paveikslėlio pozicija per centrą */
-            color: white; /* Teksto spalva ant fono (priklauso nuo fono vaizdo spalvų) */
-            text-align: center;
-        }
-    </style>
 </head>
 <body>
-    <div class="section" style="height: 100px;">
+    <header>
+        <h1>Website</h1>
+        <p>Laboratory work</p>
+        <button id="themeToggle">Light/Dark Mode</button>
+    </header>
+    <nav>
+        <a href="#about">About Me</a>
+        <a href="#resume">Resume</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#services">Services</a>
+    </nav>
+    <div class="section">
         <h1>Bart Jefferson</h1>
         <p>I am a professional photographer, based in LA, California.</p>
     </div>
-    <div class="section" style="height: 550px;">
+    
+    <!-- About me -->
+    <div class="section" id="about">
         <h1>About me</h1>
         <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
         <h2>UI/UX Designer & Web Developer.</h2>
@@ -45,8 +51,9 @@
         <p> • Freelance: Available</p>
         <p>Officiis eligendi itaque labore et dolorum mollitia officiis optio vero. Quisquam sunt adipisci omnis et ut. Nulla accusantium dolor incidunt officia tempore. Et eius omnis. Cupiditate ut dicta maxime officiis quidem quia. Sed et consectetur qui quia repellendus itaque neque.</p>
     </div>
-    <div class="section" style="height: 1300px;">
-    
+
+    <!-- Resume -->
+    <div class="section" id="resume">
         <h1>Resume</h1>
         <h2>Summary</h2>
         <p><b>BRANDON JOHNSON</b></p>
@@ -84,7 +91,9 @@
         <p>• Recommended and consulted with clients on the most appropriate graphic design</p>
         <p>• Created 4+ design presentations and proposals a month for clients and account managers</p>
     </div>
-    <div class="section" style="height: 400px;">
+
+    <!-- Portfolio -->
+    <div class="section" id="portfolio">
         <h1>Portfolio</h1>
         <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
         <img src="Assets/app-1.jpg"
@@ -100,7 +109,9 @@
               width="300"
               height="200">
     </div>
-    <div class="section" style="height: 1000px;">
+
+    <!-- Services -->
+    <div class="section" id="services">
         <h1>Services</h1>
         <p>I am a professional photographer, based in LA, California.</p>
         <iframe width="420" height="315"
@@ -117,5 +128,109 @@
           Your browser does not support the audio element.
           </audio>
     </div>
+
+
+    <!-- Formulės blokas su MathJax integracija -->
+    <div class="section">
+        <p>Žemiau pateikta formulė iliustruoja kompleksinį skaičiavimą, kur naudojama Cauchy integralo teorema:</p>
+        <!-- Matematinė formulė naudojant LaTeX sintaksę -->
+        <!-- Cauchy integralo teorema: leidžia apskaičiuoti funkciją kompleksiškai integruojant -->
+        \[
+            f(a) = \frac{1}{2\pi i} \oint \frac{f(z)}{z-a} dz
+        \]
+        <p>Ši formulė leidžia apskaičiuoti funkcijos <em>f(z)</em> reikšmę taške <em>a</em> pagal uždarą integralą kompleksiškai, kur <em>z</em> yra kompleksiškas kintamasis.</p>
+
+    </div>
+
+    <!-- SVG piešinys pavyzdžiui -->
+    <h2>SVG pavyzdys</h2>
+    <!-- SVG grafinis elementas -->
+    <svg width="200" height="200" xmlns="http://www.w3.org/2000/svg">
+        <!-- Apskritimas -->
+        <!-- SVG circle elementas nubrėžia apskritimą -->
+        <circle cx="100" cy="100" r="80" stroke="black" stroke-width="3" fill="lightblue" />
+        <!-- Tekstas apskritimo centre -->
+        <text x="100" y="105" font-size="20" text-anchor="middle" fill="black">Matematikos</text>
+        <text x="100" y="130" font-size="20" text-anchor="middle" fill="black">Pavyzdys</text>
+    </svg>
+
+    <!-- Interaktyvus laikrodis -->
+    <div class="section">
+        <h2>Interaktyvus laikrodis</h2>
+    <div id="clock">00:00:00</div>
+    </div>
+
+    <!-- Kontaktų forma -->
+    <h2>Kontaktų forma</h2>
+    <form id="contactForm">
+        <label for="vardas">Vardas:</label>
+        <input type="text" id="vardas" required>
+
+        <label for="pavarde">Pavardė:</label>
+        <input type="text" id="pavarde" required>
+
+        <label for="elpastas">El. paštas:</label>
+        <input type="email" id="elpastas" required>
+
+        <label for="telefonas">Telefonas:</label>
+        <input type="tel" id="telefonas">
+
+        <label for="adresas">Adresas:</label>
+        <textarea id="adresas"></textarea>
+
+        <!-- Klausimai su vertinimais nuo 1 iki 10 -->
+        <label for="klausimas1">Kaip vertinate mūsų svetainės dizainą? (1-10):</label>
+        <input type="number" id="klausimas1" min="1" max="10" required>
+
+        <label for="klausimas2">Ar svetainė buvo lengva naudotis? (1-10):</label>
+        <input type="number" id="klausimas2" min="1" max="10" required>
+
+        <label for="klausimas3">Kaip vertinate informacijos kokybę? (1-10):</label>
+        <input type="number" id="klausimas3" min="1" max="10" required>
+
+        <label for="klausimas4">Kokia tikimybė, kad sugrįšite? (1-10):</label>
+        <input type="number" id="klausimas4" min="1" max="10" required>
+
+        <label for="klausimas5">Ar rekomenduotumėte svetainę kitiems? (1-10):</label>
+        <input type="number" id="klausimas5" min="1" max="10" required>
+
+        <button type="button" onclick="issaugotiDuomenis()">Išsaugoti</button>
+    </form>
+
+    <h2>Rezultatai</h2>
+    <div id="output"></div>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <!-- Socialinės nuorodos -->
+            <div class="social-links">
+                <a href="https://www.facebook.com" target="_blank" aria-label="Facebook">
+                    <i class="fab fa-facebook fa-2x"></i>
+                </a>
+                <a href="https://www.twitter.com" target="_blank" aria-label="Twitter">
+                    <i class="fab fa-twitter fa-2x"></i>
+                </a>
+                <a href="https://www.linkedin.com" target="_blank" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin fa-2x"></i>
+                </a>
+                <a href="https://www.github.com" target="_blank" aria-label="GitHub">
+                    <i class="fab fa-github fa-2x"></i>
+                </a>
+            </div>
+            <!-- Kontaktinė informacija -->
+            <div class="contact-info">
+                <p>Email: <a href="mailto:vardas.pavarde@example.com">Name.Lastname@example.com</a></p>
+                <p>Number: +370 600 00000</p>
+            </div>
+            <!-- Puslapio kūrėjo vardas -->
+            <div class="creator-info">
+                <p>© 2024. Created by: Nojus Šikšnys</p>
+            </div>
+        </div>
+    </footer>
+
+    <button class="back-to-top" id="backToTop">Back to top</button>
+    <script src="functions.js" ></script>
 </body>
 </html>
